@@ -23,6 +23,6 @@ error-trim.sh: diginorm-command.sh
 	bash error-trim.sh
 
 final-contigs.fa:
-	#gzip *abundfilt
-	#cat *abundfilt*gz > abundfilt-all.gz
+	gzip *abundfilt
+	cat *abundfilt*gz > abundfilt-all.gz
 	~/megahit/megahit -m 25e9 -l 250 --k-max 81 -r abundfilt-all.gz $ --cpu-only -o megahit_assembly
